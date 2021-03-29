@@ -5,7 +5,8 @@ const Home: React.FC = () => {
 	return (
 		<Fragment>
 			<Head>
-				<title>Create Next App</title>
+				<title>Shortly</title>
+				{/* TODO: Add meta data */}
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 			<h1>Next App</h1>
