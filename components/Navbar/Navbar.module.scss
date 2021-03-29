@@ -1,0 +1,22 @@
+@use '../../styles/abstracts' as *;
+
+.navbar {
+	// background-color: pink;
+	height: 8rem;
+
+	.group {
+		display: flex;
+		flex-flow: row nowrap;
+		margin-left: 2rem;
+
+		&:nth-last-child(1) {
+			margin-left: auto;
+		}
+
+		li {
+			font-size: $p-md;
+			color: $gray-violet;
+			margin-left: 2rem;
+		}
+	}
+}

@@ -9,7 +9,6 @@ const Home: React.FC = () => {
 				{/* TODO: Add meta data */}
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
-			<h1>Next App</h1>
 		</Fragment>
 	);
 };
