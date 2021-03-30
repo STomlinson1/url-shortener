@@ -1,15 +1,15 @@
 @use '../../styles/abstracts' as *;
 
 .hero {
-	min-height: 60rem;
-	height: 60rem;
+	min-height: 65rem;
+	height: 65rem;
 	position: relative;
 
 	.flex {
 		height: 100%;
 		display: flex;
 		flex-flow: column-reverse nowrap;
-		justify-content: center;
+		justify-content: flex-end;
 		align-items: center;
 		text-align: center;
 

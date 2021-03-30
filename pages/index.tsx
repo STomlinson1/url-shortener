@@ -1,7 +1,7 @@
 import { Fragment } from 'react';
 import Head from 'next/head';
 
-import { Hero } from '../components';
+import { Hero, MainContent } from '../components';
 
 const Home: React.FC = () => {
 	return (
@@ -14,6 +14,7 @@ const Home: React.FC = () => {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 			<Hero />
+			<MainContent />
 		</Fragment>
 	);
 };
