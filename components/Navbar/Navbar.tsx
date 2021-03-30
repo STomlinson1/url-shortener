@@ -40,7 +40,7 @@ const Navbar: React.FC = () => {
 					<li>
 						<Link href="/">
 							<a className={s.btnContainer}>
-								<Button text="Sign up" />
+								<Button text="Sign up" variant="primary" />
 							</a>
 						</Link>
 					</li>

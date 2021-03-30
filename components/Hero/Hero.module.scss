@@ -1,0 +1,79 @@
+@use '../../styles/abstracts' as *;
+
+.hero {
+	min-height: 60rem;
+	height: 60rem;
+	position: relative;
+
+	.flex {
+		height: 100%;
+		display: flex;
+		flex-flow: column-reverse nowrap;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+
+		@include for-tablet-up {
+			flex-flow: row nowrap;
+			justify-content: flex-start;
+			align-items: center;
+			text-align: left;
+		}
+
+		.content {
+			display: flex;
+			flex-flow: column nowrap;
+			align-items: center;
+
+			@include for-tablet-up {
+				min-width: 55rem;
+				align-items: flex-start;
+			}
+
+			h1 {
+				font-size: $heading-xl;
+				max-width: 15ch;
+				line-height: 1.2;
+
+				@include for-tablet-up {
+					font-size: $heading-4xl;
+				}
+			}
+
+			p {
+				margin-top: 1rem;
+				font-size: $p-md;
+				color: $gray-violet;
+				max-width: 40ch;
+
+				@include for-tablet-up {
+					font-size: $p-lg;
+				}
+			}
+
+			.buttonContainer {
+				display: inline-block;
+				margin-top: 2rem;
+				width: 15rem;
+				height: 4rem;
+				font-size: $p-md;
+			}
+		}
+
+		.imgContainer {
+			margin-bottom: 2rem;
+			max-width: 50rem;
+			transform: translateX(15%);
+
+			@include for-tablet-up {
+				display: none;
+			}
+
+			@include for-tablet-l-up {
+				display: block;
+				transform: none;
+				max-width: 100%;
+			}
+		}
+	}
+}
