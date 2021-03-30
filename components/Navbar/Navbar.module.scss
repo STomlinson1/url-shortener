@@ -1,7 +1,6 @@
 @use '../../styles/abstracts' as *;
 
 .navbar {
-	// background-color: pink;
 	height: 8rem;
 
 	.group {
@@ -16,7 +15,7 @@
 		li {
 			font-size: $p-md;
 			color: $gray-violet;
-			margin-left: 2rem;
+			margin-left: 3rem;
 		}
 	}
 }
