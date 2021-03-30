@@ -6,7 +6,13 @@ interface ButtonProps {
 }
 
 const Button: React.FC<ButtonProps> = ({ text, onClick }) => {
-	console.log(onClick);
+	if (onClick) {
+		return (
+			<button onClick={onClick} className={`${s.button} ${s.primary}`}>
+				{text}
+			</button>
+		);
+	}
 
 	return <button className={`${s.button} ${s.primary}`}>{text}</button>;
 };

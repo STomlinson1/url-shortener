@@ -1,6 +1,7 @@
 import s from './Navbar.module.scss';
 
 import Logo from '../Logo/Logo';
+import Button from '../Button/Button';
 
 const Navbar: React.FC = () => {
 	return (
@@ -8,13 +9,25 @@ const Navbar: React.FC = () => {
 			<div className="container-l flex-row">
 				<Logo />
 				<ul className={s.group}>
-					<li>Features</li>
-					<li>Pricing</li>
-					<li>Resources</li>
+					<li>
+						<a>Features</a>
+					</li>
+					<li>
+						<a>Pricing</a>
+					</li>
+					<li>
+						<a>Resources</a>
+					</li>
 				</ul>
 				<ul className={s.group}>
-					<li>login</li>
-					<li>sign up</li>
+					<li>
+						<a>Login</a>
+					</li>
+					<li>
+						<a className={s.btnContainer}>
+							<Button text="Sign up" />
+						</a>
+					</li>
 				</ul>
 			</div>
 		</nav>
