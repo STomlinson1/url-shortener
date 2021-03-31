@@ -8,9 +8,13 @@ const ContentSection: React.FC = () => {
 			<div className={`container-l ${s.flex}`}>
 				<div className={s.searchContainer}>
 					<div className={s.inputContainer}>
-						<input className={s.input} type="text" />
+						<input
+							className={s.input}
+							type="text"
+							placeholder="Shorten a link here..."
+						/>
 						<div className={s.buttonContainer}>
-							<Button text="Shorten It!" variant="primary" />
+							<Button text="Shorten It!" variant="primary" boxed />
 						</div>
 					</div>
 				</div>
