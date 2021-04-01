@@ -75,7 +75,7 @@
 
 		.cardContainer {
 			width: 100%;
-			margin: 9rem 0 15rem 0;
+			margin: 9rem 0 7rem 0;
 			display: flex;
 			flex-flow: column nowrap;
 			justify-content: space-between;
@@ -83,6 +83,7 @@
 
 			@include for-tablet-up {
 				flex-flow: row nowrap;
+				margin-bottom: 15rem;
 			}
 
 			.divider {
