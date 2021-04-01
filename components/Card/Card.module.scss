@@ -4,20 +4,32 @@
 	position: relative;
 	padding: 3rem;
 	padding-top: 6rem;
-	width: 37rem;
+	max-width: 37rem;
+	width: 100%;
 	min-height: 20rem;
 	flex: 0 1 auto;
 	background-color: $white;
 	border-radius: 5px;
 	display: flex;
 	flex-flow: column nowrap;
+	text-align: center;
+	align-items: center;
 
-	&:nth-of-type(2) {
-		transform: translateY(3.5rem);
+	@include for-mobile-only {
+		max-width: 100%;
 	}
 
-	&:nth-of-type(3) {
-		transform: translateY(7rem);
+	@include for-tablet-up {
+		text-align: left;
+		align-items: flex-start;
+
+		&:nth-of-type(2) {
+			transform: translateY(3.5rem);
+		}
+
+		&:nth-of-type(3) {
+			transform: translateY(7rem);
+		}
 	}
 
 	.imgContainer {
@@ -29,8 +41,15 @@
 		align-items: center;
 		background-color: $primary-violet;
 		position: absolute;
+		left: 50%;
 		top: 0;
-		transform: translateY(-50%);
+		transform: translate(-50%, -50%);
+
+		@include for-tablet-up {
+			left: unset;
+			transform: none;
+			transform: translateY(-50%);
+		}
 
 		img {
 			width: 55%;

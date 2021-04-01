@@ -59,7 +59,6 @@ const ContentSection: React.FC = () => {
 						);
 					})}
 				</div>
-				<div className={s.block} />
 			</div>
 		</section>
 	);
