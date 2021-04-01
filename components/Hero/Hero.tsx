@@ -5,7 +5,7 @@ import Button from '../Button/Button';
 
 const Hero = () => {
 	return (
-		<section className={s.hero}>
+		<header className={s.hero}>
 			<div className={`container-l ${s.flex}`}>
 				<div className={s.content}>
 					<h1>More than just shorter links</h1>
@@ -23,7 +23,7 @@ const Hero = () => {
 					<img src="/images/illustration-working.svg" alt="person at desktop" />
 				</div>
 			</div>
-		</section>
+		</header>
 	);
 };
 
