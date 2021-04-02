@@ -1,7 +1,7 @@
 import { Fragment } from 'react';
 import Head from 'next/head';
 
-import { Hero, MainContent, CtaSection } from '../components';
+import { Hero, MainContent, CtaSection, Footer } from '../components';
 
 const Home: React.FC = () => {
 	return (
@@ -16,6 +16,7 @@ const Home: React.FC = () => {
 			<Hero />
 			<MainContent />
 			<CtaSection />
+			<Footer />
 		</Fragment>
 	);
 };

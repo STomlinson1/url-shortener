@@ -1,0 +1,45 @@
+@use '../../styles/abstracts' as *;
+
+.footer {
+	background-color: $dark-violet;
+	color: $white;
+	padding-top: 5rem;
+
+	.logo {
+		width: 15rem;
+		svg {
+			fill: $white;
+			transform: scale(0.8);
+		}
+	}
+
+	.flex {
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: space-between;
+	}
+
+	.linkContainer {
+		width: 50%;
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: space-between;
+	}
+
+	.social {
+		width: 15rem;
+		height: 2.4rem;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		svg {
+			fill: $white;
+
+			&:hover {
+				cursor: pointer;
+				fill: $primary-cyan;
+			}
+		}
+	}
+}
