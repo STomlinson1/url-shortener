@@ -7,68 +7,8 @@ import Facebook from '../../public/images/icon-facebook.svg';
 import Twitter from '../../public/images/icon-twitter.svg';
 import Pinterest from '../../public/images/icon-pinterest.svg';
 import Instagram from '../../public/images/icon-instagram.svg';
-import { link } from 'node:fs';
 
-const linkGroups = [
-	[
-		{
-			text: 'Features',
-			href: '/'
-		},
-		{
-			text: 'Link Shortening',
-			href: '/'
-		},
-		{
-			text: 'Branded Links',
-			href: '/'
-		},
-		{
-			text: 'Analytics',
-			href: '/'
-		}
-	],
-	[
-		{
-			text: 'Resources',
-			href: '/'
-		},
-		{
-			text: 'Blog',
-			href: '/'
-		},
-		{
-			text: 'Developers',
-			href: '/'
-		},
-		{
-			text: 'Support',
-			href: '/'
-		}
-	],
-	[
-		{
-			text: 'Company',
-			href: '/'
-		},
-		{
-			text: 'About',
-			href: '/'
-		},
-		{
-			text: 'Our Team',
-			href: '/'
-		},
-		{
-			text: 'Careers',
-			href: '/'
-		},
-		{
-			text: 'Contact',
-			href: '/'
-		}
-	]
-];
+import { linkGroups } from './data';
 
 const Footer = () => {
 	return (
