@@ -1,12 +1,38 @@
+import { useState, Fragment } from 'react';
+
+import ShrtcodeService from '../../services/shrtcode';
 import s from './ContentSection.module.scss';
 
 import Button from '../Button/Button';
 import Card from '../Card/Card';
-import { Fragment } from 'react';
+import Links from '../Links/Links';
 
 import { cardData } from './data';
+import { ApiData } from '../../types';
 
 const ContentSection: React.FC = () => {
+	const [ url, setUrl ] = useState('');
+	const [ links, setLinks ] = useState<ApiData[]>([]);
+	const [ loading, setLoading ] = useState(false);
+	const [ error, setError ] = useState(false);
+
+	const shortenUrl = async () => {
+		try {
+			setError(false);
+			setLoading(true);
+			const data = await ShrtcodeService.create(url);
+			setLoading(false);
+			setLinks([ ...links, data ]);
+			console.log(data);
+		} catch (error) {
+			setLoading(false);
+			setError(true);
+			setTimeout(() => setError(false), 5000);
+		}
+	};
+
+	console.log(links);
+
 	return (
 		<section className={s.section}>
 			<div className={`container-l ${s.flex}`}>
@@ -16,12 +42,21 @@ const ContentSection: React.FC = () => {
 							className={s.input}
 							type="text"
 							placeholder="Shorten a link here..."
+							value={url}
+							onChange={(e) => setUrl(e.target.value)}
 						/>
 						<div className={s.buttonContainer}>
-							<Button text="Shorten It!" variant="primary" boxed />
+							<Button
+								text="Shorten It!"
+								variant="primary"
+								boxed
+								onClick={shortenUrl}
+							/>
 						</div>
 					</div>
 				</div>
+				<Links links={links} />
+
 				<h2 className={s.heading}>Advanced Statistics</h2>
 				<p className={s.subtext}>
 					Track how your links are performing across the web with our advanced
