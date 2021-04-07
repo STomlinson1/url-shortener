@@ -1,3 +1,12 @@
+Url Shortener application built with React, Next, TypeScript, and the Shrtcode API.
+
+Live site can be found [here](https://url-shortener-stomlinson1.vercel.app/).
+
+[React](https://reactjs.org/)\
+[Next](https://nextjs.org/)\
+[Shrtcode API](https://app.shrtco.de/docs)\
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started

@@ -9,7 +9,10 @@ const Home: React.FC = () => {
 			<Head>
 				<meta charSet="utf-8" />
 				<meta name="viewport" content="initial-scale=1.0, width=device-width" />
-				<meta name="description" content="Web site created using create-next-app" />
+				<meta
+					name="description"
+					content="Url shortener application built with Next and the Shrtcode API"
+				/>
 				<title>Shortly</title>
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
