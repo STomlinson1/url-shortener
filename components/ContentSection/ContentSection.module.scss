@@ -17,36 +17,58 @@
 			transform: translateY(-50%);
 
 			.inputContainer {
-				min-height: 12rem;
+				min-height: 13rem;
 				background: url('/images/bg-shorten-desktop.svg') center center/cover
 					no-repeat;
 				background-color: $primary-violet;
 				border-radius: 5px;
-				padding: 2rem;
+				padding: 3rem;
 				display: flex;
 				flex-flow: column nowrap;
 
 				@include for-tablet-up {
-					padding: 1rem 5rem;
+					padding: 0 5rem;
 					flex-flow: row nowrap;
 					align-items: center;
 				}
 
-				.input {
+				.inputWrapper {
 					flex: 1 0 auto;
-					height: 5rem;
-					border: none;
-					border-radius: 5px;
-					padding-left: 3rem;
-					font-size: $p-md;
+					position: relative;
 
 					@include for-tablet-up {
 						margin-right: 2rem;
 					}
 				}
 
+				.input {
+					height: 5rem;
+					width: 100%;
+					border: none;
+					border-radius: 5px;
+					padding-left: 3rem;
+					font-size: $p-md;
+				}
+
+				.error {
+					border: 2px solid $red;
+
+					&::placeholder {
+						color: $red;
+					}
+				}
+
+				.errorMessage {
+					position: absolute;
+					top: 5.5rem;
+					left: 0;
+					color: $red;
+					font-size: $p-sm;
+					font-style: italic;
+				}
+
 				.buttonContainer {
-					margin-top: 2rem;
+					margin-top: 3rem;
 					width: 100%;
 					height: 5rem;
 					font-size: $p-md;

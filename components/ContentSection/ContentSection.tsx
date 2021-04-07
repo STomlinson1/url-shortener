@@ -20,37 +20,42 @@ const ContentSection: React.FC = () => {
 		try {
 			setError(false);
 			setLoading(true);
+
 			const data = await ShrtcodeService.create(url);
+
 			setLoading(false);
-			setLinks([ ...links, data ]);
-			console.log(data);
+			setUrl('');
+			setLinks([ data, ...links ]);
 		} catch (error) {
 			setLoading(false);
 			setError(true);
-			setTimeout(() => setError(false), 5000);
 		}
 	};
-
-	console.log(links);
 
 	return (
 		<section className={s.section}>
 			<div className={`container-l ${s.flex}`}>
 				<div className={s.searchContainer}>
 					<div className={s.inputContainer}>
-						<input
-							className={s.input}
-							type="text"
-							placeholder="Shorten a link here..."
-							value={url}
-							onChange={(e) => setUrl(e.target.value)}
-						/>
+						<div className={s.inputWrapper}>
+							<input
+								className={`${s.input} ${error ? s.error : ''}`}
+								type="text"
+								placeholder="Shorten a link here..."
+								value={url}
+								onChange={(e) => setUrl(e.target.value)}
+							/>
+							{error && (
+								<span className={s.errorMessage}>Please add a valid link</span>
+							)}
+						</div>
 						<div className={s.buttonContainer}>
 							<Button
 								text="Shorten It!"
 								variant="primary"
 								boxed
 								onClick={shortenUrl}
+								loading={loading}
 							/>
 						</div>
 					</div>
