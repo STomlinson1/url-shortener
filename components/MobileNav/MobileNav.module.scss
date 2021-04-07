@@ -1,0 +1,46 @@
+@use '../../styles/abstracts' as *;
+
+.mobileNav {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: $primary-violet;
+	clip-path: circle(0px at 100% 0%);
+	transition: all 1s ease-in-out;
+	pointer-events: none;
+
+	@include for-tablet-up {
+		display: none;
+	}
+
+	.group {
+		height: 100%;
+		display: flex;
+		flex-flow: column;
+		justify-content: space-around;
+		align-items: center;
+	}
+
+	a {
+		color: $white;
+		font-size: $p-lg;
+
+		&:hover {
+			color: $primary-cyan;
+		}
+	}
+
+	.btnContainer {
+		height: 5rem;
+		width: 100%;
+		max-width: 25rem;
+		font-size: $p-lg;
+	}
+}
+
+.open {
+	pointer-events: all;
+	clip-path: circle(1250px at 93% 5%);
+}

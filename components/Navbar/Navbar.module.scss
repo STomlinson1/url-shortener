@@ -39,6 +39,7 @@
 		margin-left: auto;
 		width: 3.25rem;
 		height: 3.25rem;
+		z-index: 100;
 
 		&:hover {
 			cursor: pointer;
@@ -52,5 +53,9 @@
 		@include for-tablet-up {
 			display: none;
 		}
+	}
+
+	.open {
+		color: $white;
 	}
 }

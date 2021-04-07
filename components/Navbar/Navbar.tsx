@@ -6,6 +6,7 @@ import s from './Navbar.module.scss';
 
 import Logo from '../Logo/Logo';
 import Button from '../Button/Button';
+import MobileNav from '../MobileNav/MobileNav';
 
 const Navbar: React.FC = () => {
 	const [ open, setOpen ] = useState(false);
@@ -45,9 +46,13 @@ const Navbar: React.FC = () => {
 						</Link>
 					</li>
 				</ul>
-				<div className={s.navButtonContainer} onClick={() => setOpen(!open)}>
+				<div
+					className={`${s.navButtonContainer} ${open ? s.open : ''}`}
+					onClick={() => setOpen(!open)}
+				>
 					{open ? <RiCloseLine /> : <RiMenu4Line />}
 				</div>
+				<MobileNav open={open} />
 			</div>
 		</nav>
 	);
