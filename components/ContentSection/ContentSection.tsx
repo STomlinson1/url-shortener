@@ -30,13 +30,10 @@ const ContentSection: React.FC = () => {
 
 			setLinks([ data, ...updatedLinks ]);
 		} catch (error) {
-			console.log(error);
 			setLoading(false);
 			setError(true);
 		}
 	};
-
-	console.log(links);
 
 	return (
 		<section className={s.section}>
