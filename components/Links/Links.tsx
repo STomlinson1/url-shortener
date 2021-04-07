@@ -15,6 +15,13 @@ interface LinkProps {
 }
 
 const Link: React.FC<LinkProps> = ({ link }) => {
+	const [ copied, setCopied ] = useState(false);
+
+	const copyToClipBoard = () => {
+		navigator.clipboard.writeText(link.result.full_short_link);
+		setCopied(true);
+	};
+
 	return (
 		<li className={s.link}>
 			<p className={s.original}>{link.result.original_link}</p>
@@ -23,7 +30,12 @@ const Link: React.FC<LinkProps> = ({ link }) => {
 					<p>{link.result.full_short_link}</p>
 				</a>
 				<div className={s.btnContainer}>
-					<Button text="Copy" variant="primary" boxed />
+					<Button
+						text={copied ? 'Copied!' : 'Copy'}
+						variant={copied ? 'secondary' : 'primary'}
+						boxed
+						onClick={copyToClipBoard}
+					/>
 				</div>
 			</div>
 		</li>
