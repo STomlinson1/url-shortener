@@ -25,12 +25,18 @@ const ContentSection: React.FC = () => {
 
 			setLoading(false);
 			setUrl('');
-			setLinks([ data, ...links ]);
+
+			const updatedLinks = links.filter((link, idx) => idx < 3);
+
+			setLinks([ data, ...updatedLinks ]);
 		} catch (error) {
+			console.log(error);
 			setLoading(false);
 			setError(true);
 		}
 	};
+
+	console.log(links);
 
 	return (
 		<section className={s.section}>
